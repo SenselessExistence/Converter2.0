@@ -42,6 +42,10 @@
             // TypeOfMoney
             // 
             this.TypeOfMoney.FormattingEnabled = true;
+            this.TypeOfMoney.Items.AddRange(new object[] {
+            "USD",
+            "EUR",
+            "UAH"});
             this.TypeOfMoney.Location = new System.Drawing.Point(98, 35);
             this.TypeOfMoney.Name = "TypeOfMoney";
             this.TypeOfMoney.Size = new System.Drawing.Size(121, 23);
@@ -50,6 +54,10 @@
             // TypeOfMoney2
             // 
             this.TypeOfMoney2.FormattingEnabled = true;
+            this.TypeOfMoney2.Items.AddRange(new object[] {
+            "USD",
+            "EUR",
+            "UAH"});
             this.TypeOfMoney2.Location = new System.Drawing.Point(277, 35);
             this.TypeOfMoney2.Name = "TypeOfMoney2";
             this.TypeOfMoney2.Size = new System.Drawing.Size(121, 23);

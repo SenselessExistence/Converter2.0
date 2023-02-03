@@ -69,6 +69,7 @@
             this.AuthorizationButton.TabIndex = 2;
             this.AuthorizationButton.Text = "Авторизироваться";
             this.AuthorizationButton.UseVisualStyleBackColor = false;
+            this.AuthorizationButton.Click += new System.EventHandler(this.AuthorizationButton_Click);
             // 
             // StartPoint
             // 

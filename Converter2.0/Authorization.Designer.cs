@@ -99,6 +99,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AuthorizationButton);
             this.Name = "Authorization";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Authorization";
             this.ResumeLayout(false);
             this.PerformLayout();

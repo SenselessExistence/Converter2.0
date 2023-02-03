@@ -12,13 +12,6 @@ namespace Converter2._0
 {
     public partial class Converter : Form
     {
-        Dictionary<string, double> money = new Dictionary<string, double>()
-        {
-            {"USD", 1 },
-            {"EUR", 1.08 },
-            {"UAH", 0.025 }
-
-        };
         public Converter()
         {
             InitializeComponent();
@@ -30,8 +23,13 @@ namespace Converter2._0
             {
                 return;
             }
-            double value = Convert.ToDouble(InputValue.Text);
-            Result.Text = Convert.ToString(Math.Round(value * money[TypeOfMoney.Text] / money[TypeOfMoney2.Text], 2));
+
+            else
+            {
+                Operation operation = new Operation();
+                Result.Text = operation.Convertation(Convert.ToDouble(InputValue.Text), TypeOfMoney.Text, TypeOfMoney2.Text);
+            }
+            
         }
     }
 }

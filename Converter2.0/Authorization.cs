@@ -19,7 +19,11 @@ namespace Converter2._0
 
         private void AuthorizationButton_Click(object sender, EventArgs e)
         {
-
+            if(LoginTextBox.Text.Length == 0 || PasswordTextBox.Text.Length == 0)
+            {
+                EventDialog eventDialog = new EventDialog("Неверный логин или пароль!");
+                eventDialog.ShowDialog();
+            }
         }
     }
 }

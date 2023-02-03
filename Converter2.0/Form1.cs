@@ -23,5 +23,12 @@ namespace Converter2._0
             Registration registration = new Registration();
             registration.ShowDialog();
         }
+
+        private void AuthorizationButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Authorization authorization = new Authorization();
+            authorization.ShowDialog();
+        }
     }
 }
