@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Text.Json;
 
 namespace Converter2._0
@@ -9,9 +10,9 @@ namespace Converter2._0
     {
         public UserManagment()
         {
-            InitializeUsers();
             this.FileLink = "users.json";
             this.Stream = new FileStream(FileLink, FileMode.OpenOrCreate);
+            InitializeUsers();
             this.Stream.Close();
             this.Reader = new FileStream(FileLink, FileMode.Open);
             this.Reader.Close();
@@ -27,7 +28,8 @@ namespace Converter2._0
             {
                 if (Stream.Length != 0)
                 {
-                    this.Users = await System.Text.Json.JsonSerializer.DeserializeAsync<List<User>>(Stream);
+                    StreamReader reader = new StreamReader(Stream, Encoding.UTF8);
+                    this.Users = (List<User>)JsonConvert.DeserializeObject(reader.ReadToEnd());
                 }
                 Stream.Close();
             }
